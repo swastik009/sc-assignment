@@ -1,0 +1,6 @@
+require 'pry'
+require_relative '../lib/terminal_app'
+
+DATA_PATH = File.expand_path('../data/clients.json', __dir__)
+
+TerminalApp.new(DATA_PATH).run
