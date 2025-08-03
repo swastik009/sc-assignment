@@ -123,7 +123,10 @@ class TerminalApp
     puts "--- Page #{page + 1} of #{total_pages} ---"
     records = results.slice(page * PER_PAGE, PER_PAGE)
     puts '------------------------------------------'
-    records.each { |r| puts r }
+    divider = "+#{'-' * 38}+"
+    records.each do |r|
+      puts "\n#{divider}\n| #{r.to_s.lines.map { |line| line.strip }.join("\n| ")}\n#{divider}"
+    end
     puts '------------------------------------------'
     puts "\n(n)ext, (p)revious, (q)uit"
     print '> '

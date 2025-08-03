@@ -15,6 +15,6 @@ class Client
     display = @attrs.map do |k, v|
       "#{k}: #{v}"
     end.join(', ')
-    "#{display}\n------------------------"
+    "#{display}"
   end
 end

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShiftCare API Docs</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui.css">
+</head>
+<body>
+  <div id="swagger-ui"></div>
+  <script src="https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui-bundle.js"></script>
+  <script src="https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui-standalone-preset.js"></script>
+  <script>
+    window.onload = function() {
+      const ui = SwaggerUIBundle({
+        url: '/swagger.json', // Matches the mount point in entrypoint.rb
+        dom_id: '#swagger-ui',
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        layout: "StandaloneLayout",
+        onComplete: () => {
+          console.log('Swagger UI loaded successfully');
+        },
+        requestInterceptor: (req) => {
+          console.log('Requesting:', req.url);
+          return req;
+        },
+        onFailure: (error) => {
+          console.error('Failed to load or parse Swagger JSON:', error);
+        }
+      });
+      window.ui = ui;
+    };
+  </script>
+</body>
+</html>
