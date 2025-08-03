@@ -1,3 +1,9 @@
+## Setup
+
+1. Install Ruby (>= 2.5 recommended)
+2. Run `bundle install` to install dependencies
+4. Run CLI or API as shown below
+
 ## CLI Usage
 
 Run the interactive CLI:
@@ -6,7 +12,7 @@ Run the interactive CLI:
 ruby bin/client_tool
 ```
 
-## Web API & Swagger UI
+## Web API & Swagger
 
 ### Start the server
 
@@ -117,12 +123,6 @@ All endpoints return JSON.
 - `lib/client_loader.rb`, `lib/client_searcher.rb`, `lib/client.rb` — Core logic
 - `data/clients.json` — Example data file
 
-## Setup
-
-1. Install Ruby (>= 2.5 recommended)
-2. Run `bundle install` to install dependencies
-3. Place your client data in `data/clients.json` (array of objects)
-4. Run CLI or API as shown above
 
 ## Example JSON
 
