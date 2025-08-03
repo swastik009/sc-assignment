@@ -1,0 +1,7 @@
+lib/client.rb 6fb57307d4aa77d97bb306c838159f02588517f3
+lib/terminal_app.rb 711300728c15ad40099c59654b1649a55d9e861d
+lib/client_loader.rb f53f01daa8ec939dfdbb3f618de55da1fcc7e533
+lib/client_searcher.rb 5ca09f778280d6a77f5811f00bef81e48985d34f
+entrypoint.rb b0d7b7697c2d185b97a05ec5afd51ef0c4e70d29
+app/api/app_loader.rb 8e7e7b3165f2edd51caad49ca827de8aa851dfcc
+app/api/api_controller.rb 3832ef3c4639399dbf3e7478a2d27a646eb631ac

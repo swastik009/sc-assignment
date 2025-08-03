@@ -1,0 +1,5 @@
+lib/**/*.rb
+entrypoint.rb
+app/api/*.rb
+
+--private
