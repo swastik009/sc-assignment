@@ -21,6 +21,7 @@ RSpec is used for unit testing.
   - Missing fields
   - No search results
   - Duplicate detection with multiple matches
+
 # ShiftCare
 
 ## CLI Usage
@@ -37,6 +38,36 @@ Or use the advanced terminal app:
 ```sh
 ruby lib/terminal_app.rb data/clients.json
 ```
+
+## Documentation (YARD)
+
+YARD is used for generating Ruby API documentation, including private methods.
+
+### Generate Documentation
+
+1. Make sure you have run `bundle install`.
+2. Run:
+   ```sh
+   bundle exec yard doc
+   ```
+   This will generate HTML docs in the `doc/` directory.
+
+### View Documentation
+
+Open `doc/index.html` in your browser to view the generated documentation.
+
+
+### Notes
+- All public and private methods are included in the docs (see `.yardopts`).
+- Markdown is supported in doc comments (no custom Markdown gem is used; YARD's default Markdown parser is sufficient).
+
+### Live Documentation Server
+
+To view docs locally with live search and navigation, run:
+```sh
+bundle exec yard server --private
+```
+Then open [http://localhost:8808](http://localhost:8808) in your browser.
 
 Features:
 - Search clients by any field (dynamic selection)
